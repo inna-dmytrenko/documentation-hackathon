@@ -1,2 +1,2 @@
 # documentation-hackathon
-Вocumentation hackathon Debug Divas
+Documentation hackathon Debug Divas
