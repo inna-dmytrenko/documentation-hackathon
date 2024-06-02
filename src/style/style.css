@@ -21,7 +21,7 @@ body {
   }
   
   ul {
-    list-style: none;
+    /* list-style: none; */
     padding: 0;
     margin: 0;
   }
@@ -80,6 +80,11 @@ body {
 h1, h2, h3 {
     color: #333;
 }
+.section{
+  max-width: 500px;
+  text-align: center;
+margin: 0 auto;
+}
 .container {
    
 }
@@ -89,3 +94,19 @@ h1, h2, h3 {
     border-radius: 4px;
     font-family: 'Courier New', Courier, monospace;
 }
+table, th, td {
+  border: 1px solid black;
+}
+/* ol { */
+  /* counter-reset: subsection; Обнуление счетчика для каждого нового подраздела */
+  /* list-style-type: none; Отключение стандартной нумерации, так как мы будем формировать номера сами */
+/* } */
+
+/* li { */
+  /* display: block; Каждый элемент списка представляется как отдельный блок */
+/* } */
+
+/* li::before { */
+  /* counter-increment: subsection; Увеличение значения счетчика для каждого элемента списка */
+  /* content: "1." counter(subsection) ". "; Форматирование вывода номера элемента */
+/* } */

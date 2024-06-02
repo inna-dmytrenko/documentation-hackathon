@@ -1,122 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Doc Debug Divas</title>
-    <link rel="stylesheet" href="./src/style/style.css">
-    <link rel="stylesheet" href="./src/style/normalize.css">
-    <link rel="icon" type="image/x-icon" href="./src/assets/favicon/Debug_Divas.png" />
-</head>
+    <link rel="stylesheet" href="./src/style/style.css" />
+    <link rel="stylesheet" href="./src/style/normalize.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./src/assets/favicon/Debug_Divas.png"
+    />
+  </head>
 
-<body>
+  <body>
     <div class="wrapper">
-        <!-- <h1>Dokumentation</h1> -->
-        <img src="./src/assets/image/images.png" alt="">
-        
-       
-        <h1>Hackathon Documentation: Testing Vacation Booking Site</h1>
+      <!-- <h1>Dokumentation</h1> -->
+      <img src="./src/assets/image/images.png" alt="" />
 
-        <h2>Project Description</h2>
-        <p>During the hackathon, we tested a vacation booking site. This site allows users to search for, view, and book hotel rooms for selected dates.</p>
-
-        <h2>Testing Objectives</h2>
-        <p>The main objectives of the testing were to verify the site's functionality, usability, security, and performance. Specifically, we focused on the following aspects:</p>
+      <section class="section">
+        <h1>Finální dokumentace testování</h1>
+        <p>Debug Divas</p>
+        <p>Hackathon 2024</p>
+      </section>
+      <section class="">
+        <h2>1 Průběh testování</h2>
+        <p>
+          Hackathon startoval 25. května 2024 společným zahájením v 8:00 hodin.
+          Byla testována
+          <a href="https://hackathon24-ova-debug-divas.czechhackitas.cz/"
+            >webová aplikace</a
+          >webová aplikace, přičemž první část práce byla dokončena týž den ve
+          19:45 hodin. Tento dokument popisuje metody a postupy, které náš tým
+          Debug Divas používal při funkčním testování webové aplikace.
+        </p>
+        <h3>1.1 Seznámení s aplikací</h3>
+        <p>Aktivity:</p>
         <ul>
-            <li>Correctness of room search</li>
-            <li>Accuracy of room information display</li>
-            <li>Booking process</li>
-            <li>Payment processing</li>
-            <li>User data security</li>
-            <li>Compatibility with different browsers and devices</li>
+          <li>Exploratory testing</li>
+          <li>Individuální procházení aplikace</li>
+          <li>Čtení dokumentace v systému Jira</li>
+          <li>
+            Příprava dotazů pro Product Ownera (PO) - pro první schůzku bylo
+            připraveno 22 dotazů
+          </li>
         </ul>
-
-        <h2>Test Scenarios</h2>
-
-        <h3>Test Scenario 1: Room Search</h3>
-        <p><strong>Description:</strong> Verify the functionality of searching for rooms with specific parameters.</p>
-        <p><strong>Steps:</strong></p>
-        <ol>
-            <li>Open the main page of the site.</li>
-            <li>Enter the destination in the search field.</li>
-            <li>Select check-in and check-out dates.</li>
-            <li>Specify the number of guests.</li>
-            <li>Click the "Search" button.</li>
-        </ol>
-        <p><strong>Expected Result:</strong> A list of available rooms matching the specified parameters is displayed.</p>
-
-        <h3>Test Scenario 2: Viewing Room Information</h3>
-        <p><strong>Description:</strong> Verify the display of detailed room information.</p>
-        <p><strong>Steps:</strong></p>
-        <ol>
-            <li>Select any room from the search results.</li>
-            <li>View the room information, including description, photos, prices, and reviews.</li>
-        </ol>
-        <p><strong>Expected Result:</strong> All information is displayed correctly, images load, and reviews are accessible for viewing.</p>
-
-        <h3>Test Scenario 3: Booking Process</h3>
-        <p><strong>Description:</strong> Verify the booking process for a room.</p>
-        <p><strong>Steps:</strong></p>
-        <ol>
-            <li>Select a room from the search results.</li>
-            <li>Click the "Book" button.</li>
-            <li>Fill in the required information (name, surname, contact details).</li>
-            <li>Select a payment method and enter payment details.</li>
-            <li>Click the "Confirm Booking" button.</li>
-        </ol>
-        <p><strong>Expected Result:</strong> The user receives a booking confirmation with relevant information displayed on the screen and sent to their email.</p>
-
-        <h3>Test Scenario 4: Payment Processing</h3>
-        <p><strong>Description:</strong> Verify the correctness of payment processing.</p>
-        <p><strong>Steps:</strong></p>
-        <ol>
-            <li>Proceed with the booking process until the payment details step.</li>
-            <li>Enter payment details (e.g., credit card number).</li>
-            <li>Confirm the payment.</li>
-        </ol>
-        <p><strong>Expected Result:</strong> Payment is processed without errors, and the user receives a successful transaction confirmation.</p>
-
-        <h3>Test Scenario 5: Data Security</h3>
-        <p><strong>Description:</strong> Verify the security of user data.</p>
-        <p><strong>Steps:</strong></p>
-        <ol>
-            <li>Check if secure protocols (HTTPS) are used on all site pages.</li>
-            <li>Conduct tests for SQL injection and other common web vulnerabilities.</li>
-            <li>Ensure personal and payment data are stored and transmitted securely.</li>
-        </ol>
-        <p><strong>Expected Result:</strong> The site is protected against major types of attacks, and user data is transmitted and stored securely.</p>
-
-        <h3>Test Scenario 6: Browser and Device Compatibility</h3>
-        <p><strong>Description:</strong> Verify the correct display of the site on different browsers and devices.</p>
-        <p><strong>Steps:</strong></p>
-        <ol>
-            <li>Open the site on different browsers (Chrome, Firefox, Safari, Edge).</li>
-            <li>Check the correct display and functionality on various devices (desktop computers, laptops, tablets, smartphones).</li>
-        </ol>
-        <p><strong>Expected Result:</strong> The site displays and functions correctly on all tested browsers and devices.</p>
-
-        <h2>Testing Results</h2>
+        <h3>1.2 Analýza aplikace</h3>
         <ul>
-            <li><strong>Room Search:</strong> Test passed successfully. All tested search parameters work correctly.</li>
-            <li><strong>Viewing Room Information:</strong> All information is displayed correctly, and no errors were found.</li>
-            <li><strong>Booking Process:</strong> The booking process works smoothly, and the user receives confirmation.</li>
-            <li><strong>Payment Processing:</strong> Payments are processed correctly, and transaction confirmations are received.</li>
-            <li><strong>Data Security:</strong> Several vulnerabilities were identified and promptly fixed. The site now meets security standards.</li>
-            <li><strong>Compatibility:</strong> The site works correctly on all tested browsers and devices.</li>
-        </ul>
+          <li>Diskuze nad cíli projektu a očekávanými výstupy</li>
+          <li>
+            Identifikace prioritních oblastí:
 
-        <h2>Recommendations</h2>
-        <ul>
-            <li>Regularly conduct security checks to identify and fix new vulnerabilities.</li>
-            <li>Improve responsive design for a better user experience on mobile devices.</li>
-            <li>Implement automated testing to ensure site stability after updates.</li>
+            <ul>
+              <li>
+                Podle priorit jednotlivých User Stories (US) byly identifikovány
+                nejdůležitější oblasti z pohledu business.
+              </li>
+              <li>
+                Tyto oblasti byly ověřeny s Product Ownerem (PO), dokument s
+                business requirements nebyl k dispozici
+              </li>
+            </ul>
+          </li>
+          <li>
+            Risk-based analýza pro identifikované prioritní oblasti - NĚCO K
+            TOMU? ODKAZ?
+          </li>
         </ul>
-
-        <h2>Conclusion</h2>
-        <p>Testing during the hackathon identified a few minor issues that were successfully resolved. Overall, the site operates stably and securely, providing users with a convenient way to search for, view, and book vacation rooms.</p>
+        <h3>1.3 Postup testování</h3>
+        <ol>
+          <li>
+            Individuální volba User Stories (US) k testování - dle priorit
+            vybrány jako první k řešení US s prioritou highest (9), poté s
+            prioritou high (9) a posléze medium (11) a low (1) - odkaz na seznam
+            US ZDE
+          </li>
+          <li>
+            Individuální práce na User Stories:
+            <ul>
+              <li>Každá bude pracovat na své US samostatně.</li>
+              <li>Každá si zvolí, jaké techniky testování použije.</li>
+              <li>Každá si zvolí, v jakých prostředích bude testovat.</li>
+              <li>Každá sama napíše Test Cases (TC) a Bug reporty (BR).</li>
+            </ul>
+          </li>
+          <li>
+            Vzájemná konzultace a spolupráce:
+            <ul>
+              <li>Vzájemná průběžná konzultace postupu.</li>
+              <li>
+                Diskuze o použitých technikách či přístupech (například API nebo
+                náhledy do databáze).
+              </li>
+              <li>
+                Vzájemné připomínkování testovacích případů a bug reportů.
+              </li>
+              <li>
+                Kontrola vyplněných náležitostí týkajících se například
+                provázanosti, workflow v systému Jira apod.
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <h4>1.3.1 Otestované User Stories</h4>
+        <p>
+          Jednalo se o převážně o systémové testování s využitím dostupných
+          nástrojů a různých úrovní. Jejich přehled je uveden níže.
+        </p>
+        <table>
+          <tr>
+            <th></th>
+            <th>User Story</th>
+            <th>Priorita</th>
+            <th>Assigned</th>
+            <th>Nástroje, způsob</th>
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>1</td>
+            <td>Search for available rooms</td>
+            <td>Highest</td>
+            <td>Petra S.</td>
+            <td>Manuální test, DevTools, API</td>
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>2</td>
+            <td>Main page room reservation</td>
+            <td>Highest</td>
+            <td>Markéta Ch.</td>
+            <td>
+              Manuální test, Automatizace, DevTools, kontrola s údaji v databázi
+            </td>
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>3</td>
+            <td>Reservation of room from list of available rooms</td>
+            <td>Highest</td>
+            <td>Petra S.</td>
+            <td>Manuální test, DevTools</td>
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>4</td>
+            <td>Shopping cart</td>
+            <td>Highest</td>
+            <td>Michaela Š.</td>
+            <td>Manuální test, DevTools</td>
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>5</td>
+            <td>Checkout page</td>
+            <td>Highest</td>
+            <td>Eva A.</td>
+            <td>Manuální test, SQL</td>
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>6</td>
+            <td>Payment methods</td>
+            <td>Highest</td>
+            <td>Inna D.</td>
+            <td>Manuální test, DevTools</td>
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>7</td>
+            <td>Online payment</td>
+            <td>Highest</td>
+            <td>Inna D.</td>
+            <td>Manuální test, DevTools</td>
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>8</td>
+            <td>Website protocol</td>
+            <td>Highest</td>
+            <td>Simona P. J.</td>
+            <td>999999999999999999</td>
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>9</td>
+            <td>GDPR</td>
+            <td>Highest</td>
+            <td>Simona P. J.</td>
+            <td>999999999999999999</td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <th></th>
+            <th>User Story</th>
+            <th>Priorita</th>
+            <th>Assigned</th>
+            <th>Nástroje, způsob</th>
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>1</td>
+            <td>Payment by Check</td>
+            <td>High</td>
+            <td>Inna D.</td>
+            <td>Manuální test, DevTools</td>
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>2</td>
+            <td>Money transfer</td>
+            <td>High</td>
+            <td>Michaela Š.</td>
+            <td>Manuální test</td>
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>3</td>
+            <td>Footer section</td>
+            <td>High</td>
+            <td>Petra S.</td>
+            <td>Manuální test</td>
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>4</td>
+            <td>Authentication page</td>
+            <td>High</td>
+            <td>Michaela Š.</td>
+            <td>Manuální test</td>
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>5</td>
+            <td>Login</td>
+            <td>High</td>
+            <td>Markéta Ch.</td>
+            <td>
+              Manuální test, automatizace, DevTools, kontrola údajů v databázi
+            </td>
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>6</td>
+            <td>Log out</td>
+            <td>High</td>
+            <td>Petra S.</td>
+            <td>Manuální test, automatizace</td>
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>7</td>
+            <td>My account page</td>
+            <td>High</td>
+            <td>Simona P. J.</td>
+            <td>999999999999999999</td>
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>8</td>
+            <td>Order history and details</td>
+            <td>High</td>
+            <td>Simona P. J.</td>
+            <td>999999999999999999</td>
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>9</td>
+            <td>Order details</td>
+            <td>High</td>
+            <td>Simona P. J.</td>
+            <td>999999999999999999</td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <th></th>
+            <th>User Story</th>
+            <th>Priorita</th>
+            <th>Assigned</th>
+            <th>Nástroje, způsob</th>
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>1</td>
+            <td>Edit search criteria from list of available rooms</td>
+            <td>Medium</td>
+            <td>Eva A.</td>
+            <td>Manuální test</td>
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>2</td>
+            <td>Additional facilities</td>
+            <td>Medium</td>
+            <td>Markéta Ch.</td>
+            <td>Manuální test</td>
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>3</td>
+            <td>Terms And conditions</td>
+            <td>Medium</td>
+            <td>Petra S.</td>
+            <td>999999999999999999</td>
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>4</td>
+            <td>Confirmation email</td>
+            <td>Medium</td>
+            <td>Markéta Ch.</td>
+            <td>Manuální test</td>
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>5</td>
+            <td>Header - Login in header section</td>
+            <td>Medium</td>
+            <td>Markéta Ch.</td>
+            <td>Manuální test</td>
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>6</td>
+            <td>Header - Shopping cart in header section</td>
+            <td>Medium</td>
+            <td>Michaela Š.</td>
+            <td>999999999999999999</td>
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>7</td>
+            <td>Newsletter subscription</td>
+            <td>Medium</td>
+            <td>Markéta Ch.</td>
+            <td>Manuální test</td>
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>8</td>
+            <td>Main sections of home page</td>
+            <td>Medium</td>
+            <td>Markéta Ch.</td>
+            <td>Manuální test, DevTools</td>
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>9</td>
+            <td>Create account</td>
+            <td>Medium</td>
+            <td>Markéta Ch.</td>
+            <td>Manuální test, DevTools, kontrola údajů v databázi</td>
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>10</td>
+            <td>Forgot password</td>
+            <td>Medium</td>
+            <td>Michaela Š.</td>
+            <td>999999999999999999</td>
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>11</td>
+            <td>SEO optimalization</td>
+            <td>Medium</td>
+            <td>Simona P. J.</td>
+            <td>999999999999999999</td>
+          </tr>
+        </table>
+      </section>
     </div>
-</div>
-</body>
-
+  </body>
 </html>
